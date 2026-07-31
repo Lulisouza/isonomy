@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }.navbar {
-    background-color: #11334b;
+    background-color: #3b206d;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,7 +22,6 @@
     color: white;
     text-decoration: none;
     transition: color 0.3s;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }.menu a:hover {
     color: #00bfff;
 }.boasvindas{
@@ -31,7 +31,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
 }.legendaprinci{
     font-size: 20px;
@@ -46,23 +45,28 @@
     text-align: center;
     margin: 70px 0 40px;
     padding-bottom: 50px ;
-}.intro1,
+}.intro1{
+    background-color: aliceblue;
+}.intro,
+.intro1,
 .intro2{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-}.intro1 img,
+}.intro img,
+.intro1 img,
 .intro2 img{
     width: 100%;
     max-width: 500px;
     height: auto;
     flex-shrink: 0;
     border-radius: 10px;
-}.intro1 p,
+}.intro p,
+.intro1 p,
 .intro2 p{
     flex: 1;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.8;
     text-align: justify;
 }.prt2,
@@ -72,6 +76,8 @@
     padding-right: 30px;
     padding-bottom: 30px;
     margin: 70px 0 40px;
+}.prt2{
+    padding-top: 50px;
 }.prt4{
     text-align: center;
     padding-top: 50px;
@@ -88,7 +94,8 @@
         font-size:35px;
     }.legendaprinci{
         font-size:18px;
-    }.intro1,
+    }.intro,
+    .intro1,
     .intro2{
         flex-direction: column;
         text-align:center;
