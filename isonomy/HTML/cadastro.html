@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isonomy - Cadastro</title>
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Isonomy</h1>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conscientizacao.html">Conscientização</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="cadastro-container">
+        <h1 class="titinicial">Criar Conta</h1>
+
+        <form>
+            
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            
+            <div class="campo">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" required>
+                <small class="aviso-campo">É necessário ter no mínimo 14 anos para se cadastrar.</small>
+            </div>
+
+            
+            <div class="campo-duplo">
+                <div class="campo">
+                    <label for="genero">Gênero <span class="opcional">(Opcional)</span></label>
+                    <select id="genero">
+                        <option value="">Selecione...</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="nao-binario">Não-binário</option>
+                        <option value="outro">Outro</option>
+                        <option value="prefiro-nao-dizer">Prefiro não informar</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone <span class="opcional">(Opcional)</span></label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+                </div>
+            </div>
+
+            
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="campo">
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+            </div>
+
+            <button type="submit" class="btn-cadastro">Cadastrar</button>
+        </form>
+
+ </div>
+<p class="registro-link">
+            Já possui conta? <a href="login.html">Faça login</a>
+        </p>
+    </div>
+    </div>
+
+    <!-- Script para bloquear no calendário datas de quem tem menos de 14 anos -->
+    <script>
+        const hoje = new Date();
+        const dataLimite = new Date(hoje.getFullYear() - 14, hoje.getMonth(), hoje.getDate());
+        const dataFormatada = dataLimite.toISOString().split('T')[0];
+        document.getElementById('nascimento').setAttribute('max', dataFormatada);
+    </script>
+    
+</body>
+</html>

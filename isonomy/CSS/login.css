@@ -78,7 +78,7 @@ body {
 .btn-login {
     width: 100%;
     padding: 12px;
-    background-color: #333;
+    background-color: #333333;
     color: white;
     border: none;
     border-radius: 5px;
@@ -90,4 +90,22 @@ body {
 
 .btn-login:hover {
     background-color: #6c4aab;
+}
+.registro-link {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 18px;
+    color: #555555;
+}
+
+.registro-link a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.registro-link a:hover {
+    color: #6c4aab;
+    text-decoration: underline;
 }

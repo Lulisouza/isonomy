@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f8;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #3b206d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu a:hover {
+    color: #00bfff;
+}
+
+/* CONTAINER DE CADASTRO */
+.cadastro-container {
+    max-width: 460px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.titinicial {
+    text-align: center;
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.opcional {
+    font-weight: normal;
+    color: #888888;
+    font-size: 12px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background-color: #fff;
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #6c4aab;
+}
+
+.aviso-campo {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777777;
+}
+
+/* CAMPOS LADO A LADO (Gênero e Telefone) */
+.campo-duplo {
+    display: flex;
+    gap: 15px;
+}
+
+.campo-duplo .campo {
+    flex: 1;
+}
+
+/* BOTÃO DE CADASTRO */
+.btn-cadastro {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-cadastro:hover {
+    background-color: #6c4aab;
+}
+.registro-link {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 18px;
+    color: #555555;
+}
+
+.registro-link a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.registro-link a:hover {
+    color: #6c4aab;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .campo-duplo {
+        flex-direction: column;
+        gap: 0;
+    }
+}
