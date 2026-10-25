@@ -19,10 +19,79 @@
         </ul>
     </nav>
 
-    <div class="inicio">
-        <h1 class="titinicial">
-            Está página é de Conscientização
-        </h1>
-    </div>
+<main class="container">
+        <section class="secao-carrossel">
+            <h2 class="titulo-secao">O que está no nosso radar</h2>
+
+            <div class="carrossel-wrapper">
+                <!-- Seta Esquerda -->
+                <button class="btn-seta seta-esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
+
+                <!-- Trilha do Carrossel (Onde ficam os blocos/cards) -->
+                <div class="carrossel-track" id="carrosselTrack">
+                    
+                    <a href="https://share.google/GTJAkv1IuRTNGwnUY" target="_blank" class="card">
+                        <div class="card-imagem">
+                            <img src="../IMG/imagem1.png" alt="História da Igualdade">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>História e marcos da igualdade de gênero no mundo</h3>
+                            <span class="card-data">08/03/2021</span>
+                        </div>
+                    </a>
+
+                    <a href="https://share.google/XDveQZCXmNCt153n8" target="_blank" class="card">
+                        <div class="card-imagem">
+                            <img src="../IMG/imagem2.png" alt="Direitos e Leis">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Principais leis e direitos que você precisa conhecer</h3>
+                            <span class="card-data">28/05/2019</span>
+                        </div>
+                    </a>
+
+                    <a href="https://share.google/zj3AI7k4A38Lsd6Ms" target="_blank" class="card">
+                        <div class="card-imagem">
+                            <img src="../IMG/imagem3.png" alt="Estudo e Trabalho">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Igualdade de gênero no mercado de trabalho</h3>
+                            <span class="card-data">20/09/2024</span>
+                        </div>
+                    </a>
+
+                    <a href="https://share.google/vXSqEgpmyRt3yV0Xt" target="_blank" class="card">
+                        <div class="card-imagem">
+                            <img src="../IMG/imagem4.1.png" alt="Fontes de Pesquisa">
+                        </div>
+                        <div class="card-conteudo">
+                            <h3>Livro "Ensino e educação com igualdade de gênero na infância e na adolescência"</h3>
+                            <span class="card-data">São Paulo, 2022</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <button class="btn-seta seta-direita" onclick="moverCarrossel(1)">&#10095;</button>
+            </div>
+
+           <div class="btn-veja-mais-container">
+            <a href="#ativistas" class="btn-veja-mais">VEJA MAIS</a>
+           </div>
+        </section>
+    
+    <!-- SCRIPT DO CARROSSEL -->
+    <script>
+        function moverCarrossel(direcao) {
+            const track = document.getElementById('carrosselTrack');
+            const card = track.querySelector('.card');
+            const larguraCard = card.offsetWidth + 20; // Largura do card + gap
+            
+            track.scrollBy({
+                left: direcao * larguraCard,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
