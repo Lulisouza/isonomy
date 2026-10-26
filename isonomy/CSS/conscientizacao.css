@@ -29,7 +29,7 @@
     max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
-
+}
 .titulo-secao {
     font-size: 26px;
     color: #222;
@@ -154,8 +154,3 @@
 .btn-veja-mais:hover {
     background-color: #6c4aab;
 }
-/* ROLAGEM SUAVE AO CLICAR EM ÂNCORAS */
-html {
-    scroll-behavior: smooth;
-}
-
