@@ -19,10 +19,40 @@
         </ul>
     </nav>
 
-    <div class="inicio">
-        <h1 class="titinicial">
-            Está página é de Notícias
-        </h1>
-    </div>
+    <main class="noticias-container">
+    <!-- Breve Definição de Igualdade de Gênero -->
+    <section class="definicao-genero">
+        <h2>O que é Igualdade de Gênero?</h2>
+        <p>
+            Igualdade de gênero é o direito humano fundamental que estabelece que todas as pessoas, independentemente do seu gênero, devem possuir os mesmos direitos, oportunidades, deveres e tratamento em todos os setores da sociedade.
+        </p>
+    </section>
+
+    <!-- Barra de Pesquisa e Filtros -->
+    <section class="controles-noticias">
+        <input type="text" id="campo-busca" placeholder="Pesquisar notícias por título ou palavra-chave..." onkeyup="filtrarNoticias()">
+        <button id="btn-notificacao" onclick="solicitarPermissaoNotificacao()">🔔 Ativar Notificações</button>
+    </section>
+
+    <!-- Feed de Notícias -->
+    <section class="grid-noticias" id="grid-noticias">
+        <!-- Exemplo de Card de Notícia -->
+        <article class="card-noticia" data-titulo="avanço da igualdade no mercado de trabalho">
+            <img src="imagem-noticia1.jpg" alt="Notícia sobre mercado de trabalho">
+            <div class="noticia-conteudo">
+                <span class="tag">Direitos</span>
+                <h3>Avanço da Igualdade no Mercado de Trabalho</h3>
+                <p>Novas iniciativas promovem a equidade salarial entre homens e mulheres...</p>
+                <div class="noticia-rodape">
+                    <span class="data">Hoje</span>
+                    <button class="btn-favorito" onclick="alternarFavorito(this, 1)">
+                        ♥ <span class="texto-fav">Favoritar</span>
+                    </button>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
 </body>
 </html>

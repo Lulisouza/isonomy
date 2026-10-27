@@ -19,6 +19,91 @@
         </ul>
     </nav>
 
-    <h1>Está página é de Eventos</h1>
+<main class="eventos-container">
+        <!-- Cabeçalho Informativo -->
+        <section class="eventos-hero">
+            <h2>Divulgação e Encontros</h2>
+            <p>
+                Espaço dedicado à criação e participação em palestras, passeatas, workshops e manifestações em prol da igualdade de gênero. Divulgue sua iniciativa ou engaje-se nos eventos da comunidade!
+            </p>
+        </section>
+
+        <!-- Painel de Ações e Filtros -->
+        <section class="eventos-acoes">
+            <div class="abas-filtro">
+                <button class="btn-aba ativa" onclick="filtrarAba('todos', this)">Eventos Disponíveis</button>
+                <button class="btn-aba" onclick="filtrarAba('participando', this)">Vou Participar</button>
+                <button class="btn-aba" onclick="filtrarAba('criados', this)">Criados por Mim</button>
+            </div>
+            <button class="btn-criar-evento" onclick="alternarFormulario()">+ Criar Novo Evento</button>
+        </section>
+
+        <!-- Formulário de Criação de Evento (Oculto por padrão) -->
+        <section class="form-container id-form-oculto" id="secao-form">
+            <div class="form-card">
+                <h3>Criar Novo Evento</h3>
+                <form id="form-evento" onsubmit="criarNovoEvento(event)">
+                    <div class="form-grid">
+                        <div class="form-grupo">
+                            <label for="titulo">Nome do Evento*</label>
+                            <input type="text" id="titulo" placeholder="Ex: Marcha pela Equidade Salarial" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="tipo">Tipo de Evento*</label>
+                            <select id="tipo" required>
+                                <option value="Palestra">Palestra</option>
+                                <option value="Passeata">Passeata</option>
+                                <option value="Manifestação">Manifestação</option>
+                                <option value="Workshop">Workshop</option>
+                                <option value="Roda de Conversa">Roda de Conversa</option>
+                            </select>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="data">Data*</label>
+                            <input type="date" id="data" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="hora">Horário*</label>
+                            <input type="time" id="hora" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="local">Local/Endereço*</label>
+                            <input type="text" id="local" placeholder="Ex: Auditório Central - Rua Imaginária, nº 123" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="organizador">Nome do Organizador*</label>
+                            <input type="text" id="organizador" placeholder="Seu nome ou instituição" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="contato">Contato/E-mail ou Tel*</label>
+                            <input type="text" id="contato" placeholder="Ex: (00) 99999-9999 ou email@exemplo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo full-width">
+                        <label for="motivo">Motivo e Descrição do Evento*</label>
+                        <textarea id="motivo" rows="4" placeholder="Explique os objetivos do evento..." required></textarea>
+                    </div>
+
+                    <div class="form-botoes">
+                        <button type="button" class="btn-cancelar" onclick="alternarFormulario()">Cancelar</button>
+                        <button type="submit" class="btn-salvar">Publicar Evento</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Grid Onde Ficarão os Cards de Eventos Dinâmicos -->
+        <section class="grid-eventos" id="grid-eventos"></section>
+    </main>
+
+    <!-- Conexão com o arquivo JavaScript de eventos -->
+    <script src="../JS/eventos.js"></script>
 </body>
 </html>

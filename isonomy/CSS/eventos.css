@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }.navbar {
-  background-color: #3b206d;
+    background-color: #3b206d;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,258 @@
     color: white;
     text-decoration: none;
     transition: color 0.3s;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }.menu a:hover {
-    color: #00bfff;
+    color: #00bfff; }
+
+    /* ==========================================
+   PÁGINA DE EVENTOS (.eventos-container)
+   ========================================== */
+
+.eventos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.eventos-hero {
+    background-color: aliceblue;
+    border-left: 6px solid #3b206d;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.eventos-hero h2 {
+    color: #3b206d;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.eventos-hero p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --- Controles (Abas e Botão Criar) --- */
+.eventos-acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.abas-filtro {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-aba {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-aba.ativa, .btn-aba:hover {
+    background-color: #3b206d;
+    color: #ffffff;
+}
+
+.btn-criar-evento {
+    background-color: #00bfff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-criar-evento:hover {
+    background-color: #0099cc;
+}
+
+/* --- Formulário de Criação --- */
+.form-container {
+    margin-bottom: 40px;
+}
+
+.id-form-oculto {
+    display: none;
+}
+
+.form-card {
+    background: #ffffff;
+    border: 2px solid #3b206d;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h3 {
+    color: #3b206d;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-grupo.full-width {
+    margin-top: 15px;
+}
+
+.form-grupo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-grupo input, 
+.form-grupo select, 
+.form-grupo textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    background: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-salvar {
+    background: #3b206d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Grid de Cards --- */
+.grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card-evento {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card-evento:hover {
+    transform: translateY(-5px);
+}
+
+.card-tipo {
+    align-self: flex-start;
+    background-color: aliceblue;
+    color: #3b206d;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.card-titulo {
+    color: #3b206d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card-info {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-info strong {
+    color: #333;
+}
+
+.card-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.btn-participar {
+    background-color: transparent;
+    border: 2px solid #3b206d;
+    color: #3b206d;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-participar.confirmado {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.participantes-count {
+    font-size: 13px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .eventos-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-criar-evento {
+        width: 100%;
+    }
 }

@@ -21,7 +21,6 @@
     color: white;
     text-decoration: none;
     transition: color 0.3s;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }.menu a:hover {
     color: #00bfff;
 }
